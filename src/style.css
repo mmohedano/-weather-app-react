@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+  
+
+  
+}
+body{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #273936;
+  color: white;
+
+}
+body:before{
+  content: '';
+  background:url(https://www.pexels.com/photo/trees-on-forest-at-daytime-1083515/) no-repeat center center/cover;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  
+
+}
+
+.App__container{
+  width: 400px;
+  height: 400px;
+  border: solid;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: auto;
+
+}
+
+.header__container{
+  width: 400px;
+  height: 100px;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.body__container{
+  width: 400px;
+  height: 200px;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.body__container-grades{
+  display: flex;
+  align-items: center;
+  font-size: 30px;
+}
+.body__container-icon{
+  
+}
+
+.bottom__container{
+  width: 400px;
+  height: 100px;
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.select__city{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.App__select{
+  margin-top: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
