@@ -168,7 +168,7 @@ function App() {
       
      </div>
      <div className="App__select">
-     <select 
+     <select  className="App__select"
       onChange={(e) => {
         onChangeOptions(e);
       }
