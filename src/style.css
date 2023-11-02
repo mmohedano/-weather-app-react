@@ -14,7 +14,7 @@ body{
 }
 body:before{
   content: '';
-  background:url(https://www.pexels.com/photo/trees-on-forest-at-daytime-1083515/) no-repeat center center/cover;
+  
   position: absolute;
   width: 100%;
   height: 100%;
@@ -54,9 +54,7 @@ body:before{
   align-items: center;
   font-size: 30px;
 }
-.body__container-icon{
-  
-}
+
 
 .bottom__container{
   width: 400px;
@@ -77,4 +75,7 @@ body:before{
   margin-top: 20px;
   padding: 5px;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

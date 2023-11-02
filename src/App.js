@@ -163,7 +163,8 @@ function App() {
      </div>
       
      </div>
-     <select className="App__select"
+     <div className="App__select">
+     <select 
       onChange={(e) => {
         onChangeOptions(e);
       }
@@ -172,6 +173,7 @@ function App() {
           <option key={d.id} value={d.id}>{d.ciudad}</option>
         ))}
       </select>
+      </div>
     </>
   );
 }
