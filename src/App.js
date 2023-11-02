@@ -1,5 +1,9 @@
 import React, {useState} from 'react';
 import './style.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faDroplet} from '@fortawesome/free-solid-svg-icons'
+import {faWind} from '@fortawesome/free-solid-svg-icons'
+import {faCloudSun} from '@fortawesome/free-solid-svg-icons'
 
 const data = [
   {
@@ -143,22 +147,22 @@ function App() {
         <h1>{cityState?.gradosc}Cº {cityState?.gradosf} Fº</h1>
       </div>
       <div className="body__container-icon">
-      <h4>⛅️</h4>
+      <h4><FontAwesomeIcon icon={faCloudSun} size="2xl" style={{color: "#dcf4e0",}} /></h4>
       <h4>{cityState?.cielo}</h4>
       </div>
      </div>
      <div className="bottom__container">
      <div className="bottom__container-humidity">
-       <span>💧 </span>
+       <span><FontAwesomeIcon icon={faDroplet} size="lg" style={{color: "#dcf4e0",}} /> </span>
        <span>{cityState?.humedad}%</span>
      </div>
      <div className="bottom__container-wind">
-       <span>💨 </span>
+       <span><FontAwesomeIcon icon={faWind} size="lg" style={{color: "#dcf4e0",}} /></span>
        <span>{cityState?.viento}</span>
      </div>
      <div className="bottom__container-conversor">
-       <span>Cº </span>
-       <span>Fº</span>
+       <button className="bottom__container-button-c">Cº </button>
+       <button className="bottom__container-button-f">Fº</button>
      </div>
      </div>
       

@@ -9,7 +9,7 @@ body{
   height: 100%;
   position: relative;
   background-color: #273936;
-  color: white;
+  color:"#dcf4e0";
   background-image: ;
 
 }
@@ -79,4 +79,21 @@ body:before{
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.bottom__container-conversor{
+  border-radius: 20px;
+  opacity: 50%;
+  color: white;
+}
+.bottom__container-button-c{
+  border-radius: 20px;
+  border: none;
+  color: black;
+  box-shadow: darkslategrey;
+}
+.bottom__container-button-f{
+  border-radius: 20px;
+  border: none;
+  color:black;
+  box-shadow: darkslategrey;
 }
