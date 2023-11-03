@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
   
   
 }
@@ -12,6 +13,10 @@ body{
   background-size:contain;
   background-position:top;
   background: cover;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+ 
   
 
 }
@@ -98,3 +103,4 @@ body{
   color:black;
   box-shadow: darkslategrey;
 }
+

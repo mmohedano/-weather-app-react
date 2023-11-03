@@ -127,6 +127,12 @@ function App() {
     const selectedCityState = data.filter((d) => d.id ==selectedId)[0];
     setCityState(selectedCityState);
   }
+  const handleClickC = () =>{
+    <h1>{cityState?.gradosc}Cº</h1>
+  }
+  const handleClickF = () =>{
+    <h1>{cityState?.gradosf}Fº</h1>
+  }
 
   return (
   <>
@@ -146,7 +152,7 @@ function App() {
    </div>
    <div className="body__container"> 
       <div className="body__container-grades">
-        <h1>{cityState?.gradosc}Cº {cityState?.gradosf} Fº</h1>
+      <h1>{cityState?.gradosc}Cº {cityState?.gradosf} Fº</h1>
       </div>
       <div className="body__container-icon">
       <h4><FontAwesomeIcon icon={faCloudSun} size="2xl" style={{color: "#dcf4e0",}} /></h4>
@@ -163,8 +169,12 @@ function App() {
        <span>{cityState?.viento}</span>
      </div>
      <div className="bottom__container-conversor">
-       <button className="bottom__container-button-c">Cº </button>
-       <button className="bottom__container-button-f">Fº</button>
+       <button onClick={handleClickC} className="bottom__container-button-c">
+        Cº 
+        </button>
+       <button onClick={handleClickF} className="bottom__container-button-f">
+        Fº
+        </button>
      </div>
      </div>
       
