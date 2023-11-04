@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import jsonData from './ciudades';
 
@@ -10,6 +11,23 @@ import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 
 
+=======
+import React, {useState} from 'react';
+import './style.css';
+import data from "./data.js"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faDroplet} from '@fortawesome/free-solid-svg-icons'
+import {faWind} from '@fortawesome/free-solid-svg-icons'
+import {faCloudSun} from '@fortawesome/free-solid-svg-icons'
+
+function getDate() {
+  const today = new Date();
+  const month = today.getMonth() + 1;
+  const day = today.getDay();
+  const date = today.getDate();
+  return `${date} ${month} `;
+}
+>>>>>>> refs/remotes/origin/main
 
 function App() {
   function getDate() {
@@ -81,6 +99,7 @@ function App() {
         </div>
 
       </div>
+<<<<<<< HEAD
       <div className="App__select">
         <select className="App__select"
           onChange={(e) => {
@@ -91,6 +110,39 @@ function App() {
             <option key={d.id} value={d.id}>{d.ciudad}</option>
           ))}
         </select>
+=======
+      <div className="body__container-icon">
+      <h4><FontAwesomeIcon icon={faCloudSun} size="2xl" style={{color: "#dcf4e0",}} /></h4>
+      <h4>{cityState?.cielo}</h4>
+      </div>
+     </div>
+     <div className="bottom__container">
+     <div className="bottom__container-humidity">
+       <span><FontAwesomeIcon icon={faDroplet} size="lg" style={{color: "#dcf4e0",}} /> </span>
+       <span>{cityState?.humedad}%</span>
+     </div>
+     <div className="bottom__container-wind">
+       <span><FontAwesomeIcon icon={faWind} size="lg" style={{color: "#dcf4e0",}} /></span>
+       <span>{cityState?.viento}</span>
+     </div>
+     <div className="bottom__container-conversor">
+       <span>Cº </span>
+       <span>Fº</span>
+     </div>
+     </div>
+      
+     </div>
+     <div className="App__select">
+     <select 
+      onChange={(e) => {
+        onChangeOptions(e);
+      }
+      }>
+        {data.map((d) => (
+          <option key={d.id} value={d.id}>{d.ciudad}</option>
+        ))}
+      </select>
+>>>>>>> refs/remotes/origin/main
       </div>
     </>
   </>);
