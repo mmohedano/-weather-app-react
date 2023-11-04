@@ -134,7 +134,7 @@ function App() {
     <h1>{cityState?.gradosf}Fº</h1>
   }
 
-  return (
+  return (<>
   <>
     <div className="App__container">
 
@@ -191,7 +191,7 @@ function App() {
       </select>
       </div>
     </>
-  );
+    </>);
 }
 
 export default App;
