@@ -64,9 +64,7 @@ function App() {
             <span>{cityState?.viento}</span>
           </div>
           <div className="bottom__container-conversor">
-            <button onClick={handleClickC} className="bottom__container-button-c">
-              ºC
-            </button>
+            
            
           </div>
         </div>
