@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 import React, { useState } from 'react';
 import jsonData from './ciudades';
 
@@ -11,7 +11,7 @@ import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 
 
-=======
+
 import React, {useState} from 'react';
 import './style.css';
 import data from "./data.js"
