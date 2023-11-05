@@ -101,6 +101,6 @@ const data = [
     },
   ];
 
-  const jsonData = JSON.stringify(data)
+  // const jsonData = JSON.stringify(data)
 
-  export default jsonData;
+  export default data;
