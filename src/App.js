@@ -80,7 +80,7 @@ function App() {
         onChangeOptions(e);
       }
       }>
-        {data.map((d) => (
+        {jsonData.map((d) => (
           <option key={d.id} value={d.id}>{d.ciudad}</option>
         ))}
       </select>
