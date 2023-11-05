@@ -42,13 +42,14 @@ function App() {
           </div>
           <div className="header__container-date">
             <h5>{currentDate}</h5>
-            <h5>VIERNES</h5>
+            <h5>DOMINGO</h5>
           </div>
         </div>
         <div className="body__container">
           <div className="body__container-grades">
             {/* //<h1>{cityState?.gradosc}ºC {cityState?.gradosf}ºF</h1> */}
-            <h1>{celsius ? `${cityState?.gradosc}°C` : `${cityState?.gradosf}°F`}</h1>
+            {/* <h1>{celsius ? `${cityState?.gradosc}°C` : `${cityState?.gradosf}°F`}</h1> */}
+            <h1>{cityState?.gradosc}ºC</h1>
           </div>
           <div className="body__container-icon">
             <h4><FontAwesomeIcon icon={faCloudSun} size="2xl" style={{ color: "#dcf4e0", }} /></h4>
@@ -65,9 +66,7 @@ function App() {
             <span>{cityState?.viento}</span>
           </div>
           <div className="bottom__container-conversor">
-            <button className="bottom__container-button-c">
-              ºC
-            </button>
+           
            
           </div>
         </div>
