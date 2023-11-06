@@ -1,28 +1,21 @@
 import React, { useState } from 'react';
 import data from './ciudades';
+import Bottom from './Bottom';
+import Middle from './Middle';
 
 import './style.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDroplet } from '@fortawesome/free-solid-svg-icons'
-import { faWind } from '@fortawesome/free-solid-svg-icons'
-import { faCloudSun } from '@fortawesome/free-solid-svg-icons'
 
 
 
 
 function App() {
-  function getDate() {
-    const today = new Date();
-    const month = today.getMonth() + 1;
-    const day = today.getDay();
-    const date = today.getDate();
-    return `${date} ${month} `;
-  }
+
   const [currentDate, setCurrentDate] = useState(getDate());
 
-  const [cityState, setCityState] = useState();
+  const [cityState, setCityState] = useState(data[0]);
 
-  const [celsius, setCelsius] = useState(true);
+  // const [celsius, setCelsius] = useState(true);
 
   const onChangeOptions = (e) => {
     const selectedId = e.target.value;
@@ -45,32 +38,8 @@ function App() {
             <h5>DOMINGO</h5>
           </div>
         </div>
-        <div className="body__container">
-          <div className="body__container-grades">
-            {/* //<h1>{cityState?.gradosc}ºC {cityState?.gradosf}ºF</h1> */}
-            {/* <h1>{celsius ? `${cityState?.gradosc}°C` : `${cityState?.gradosf}°F`}</h1> */}
-            <h1>{cityState?.gradosc}ºC</h1>
-          </div>
-          <div className="body__container-icon">
-            <h4><FontAwesomeIcon icon={faCloudSun} size="2xl" style={{ color: "#dcf4e0", }} /></h4>
-            <h4>{cityState?.cielo}</h4>
-          </div>
-        </div>
-        <div className="bottom__container">
-          <div className="bottom__container-humidity">
-            <span><FontAwesomeIcon icon={faDroplet} size="lg" style={{ color: "#dcf4e0", }} /> </span>
-            <span>{cityState?.humedad}%</span>
-          </div>
-          <div className="bottom__container-wind">
-            <span><FontAwesomeIcon icon={faWind} size="lg" style={{ color: "#dcf4e0", }} /></span>
-            <span>{cityState?.viento}</span>
-          </div>
-          <div className="bottom__container-conversor">
-           
-           
-          </div>
-        </div>
-
+      <Middle grados ={cityState.gradosc} cielo={cityState.cielo}/>
+       <Bottom viento={cityState.viento} humedad={cityState.humedad}/>
       </div>
       <div className="App__select">
         <select className="App__select"
